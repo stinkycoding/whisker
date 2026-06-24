@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Whisker Web Design</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+
+<header class="banner">
+    <img src="whiskerlogo.png" alt="Whisker logo" class="logo">
+    <h1>Whisker</h1>
+    <h2>⸻ web design ⸻</h2>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="portfolio.html">Portfolio</a>
+    </nav>
+</header>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact fade-in" id="contact">
+    <h2>phone number</h2>
+    <h2>email</h2>
+</section>
+
+
+<footer class="footer">
+    <p>2026 &copy; Whisker Web Design. All rights reserved. Made by 𑄝</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-in, .about-points').forEach(el => {
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
